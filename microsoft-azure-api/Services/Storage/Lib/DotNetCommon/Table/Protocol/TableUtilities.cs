@@ -183,7 +183,9 @@ namespace Microsoft.WindowsAzure.Storage.Table.Protocol
             destinationRequest.AllowWriteStreamBuffering = sourceRequest.AllowWriteStreamBuffering;
             destinationRequest.AuthenticationLevel = sourceRequest.AuthenticationLevel;
             destinationRequest.AutomaticDecompression = sourceRequest.AutomaticDecompression;
+#if !IOS
             destinationRequest.CachePolicy = sourceRequest.CachePolicy;
+#endif
             destinationRequest.ClientCertificates = sourceRequest.ClientCertificates;
             destinationRequest.ConnectionGroupName = sourceRequest.ConnectionGroupName;
             destinationRequest.ContinueDelegate = sourceRequest.ContinueDelegate;
