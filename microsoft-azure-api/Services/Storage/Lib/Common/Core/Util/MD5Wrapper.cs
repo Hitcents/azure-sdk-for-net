@@ -44,7 +44,9 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
         private CryptographicHash hash = null;
 #elif !COMMON
         private MD5 hash = null;
+#if !XAMARIN
         private NativeMD5 nativeMD5Hash = null;
+#endif
 #endif
 
         internal MD5Wrapper()
@@ -56,10 +58,12 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
             {
                 this.hash = MD5.Create();
             }
+#if !XAMARIN
             else
             {
                 this.nativeMD5Hash = NativeMD5.Create();
             }
+#endif
 #endif
         }
 
@@ -80,10 +84,12 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
                 {
                     this.hash.TransformBlock(input, offset, count, null, 0);
                 }
+#if !XAMARIN
                 else
                 {
                     this.nativeMD5Hash.TransformBlock(input, offset, count);
                 }
+#endif
 #endif
             }
         }
@@ -108,7 +114,11 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
             }
             else
             {
+#if XAMARIN
+                return null;
+#else
                 bytes = this.nativeMD5Hash.TransformFinalBlock(new byte[0], 0, 0);
+#endif
             }
 
             // Convert hash to string
@@ -139,9 +149,13 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
             }
             else
             {
+#if XAMARIN
+                return null;
+#else
                 int length = (int)memoryStream.Length;
                 this.nativeMD5Hash.TransformBlock(memoryStream.ToArray(), 0, length);
                 bytes = this.nativeMD5Hash.TransformFinalBlock(new byte[0], 0, 0);
+#endif
             }
 
                 // Convert hash to string
@@ -157,11 +171,13 @@ namespace Microsoft.WindowsAzure.Storage.Core.Util
 #else
             if (!this.version1MD5)
             {
+#if !XAMARIN
                 if (this.nativeMD5Hash != null)
                 {
                     this.nativeMD5Hash.Dispose();
                     this.nativeMD5Hash = null;
                 }
+#endif
             }
             else
             {

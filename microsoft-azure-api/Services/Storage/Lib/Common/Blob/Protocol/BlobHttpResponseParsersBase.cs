@@ -25,7 +25,7 @@ namespace Microsoft.WindowsAzure.Storage.Blob.Protocol
     using Microsoft.WindowsAzure.Storage.Core;
     using Microsoft.WindowsAzure.Storage.Shared.Protocol;
 
-#if DNCP
+#if DNCP 
     public
 #else
     internal
