@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{B4CE45FC-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Android", "Lib\Xamarin.Android\Xamarin.Android.csproj", "{40469EDD-A5A0-4796-AF62-A0F8B6C7C05F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.iOS", "Lib\Xamarin.iOS\Xamarin.iOS.csproj", "{0ACA0CC5-439F-46CF-82A5-6A246E42746E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,20 @@ Global
 		{40469EDD-A5A0-4796-AF62-A0F8B6C7C05F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{40469EDD-A5A0-4796-AF62-A0F8B6C7C05F}.Release|x64.ActiveCfg = Release|Any CPU
 		{40469EDD-A5A0-4796-AF62-A0F8B6C7C05F}.Release|x86.ActiveCfg = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|x64.ActiveCfg = Release|Any CPU
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -194,5 +210,6 @@ Global
 		{42CB7861-70BB-4F34-A815-4355E6EA2589} = {CE1EB2B6-0DA8-43D4-A2E1-001804697009}
 		{91930F51-683B-4933-A452-7D8DDFDBB1AC} = {CE1EB2B6-0DA8-43D4-A2E1-001804697009}
 		{40469EDD-A5A0-4796-AF62-A0F8B6C7C05F} = {CE1EB2B6-0DA8-43D4-A2E1-001804697009}
+		{0ACA0CC5-439F-46CF-82A5-6A246E42746E} = {CE1EB2B6-0DA8-43D4-A2E1-001804697009}
 	EndGlobalSection
 EndGlobal
