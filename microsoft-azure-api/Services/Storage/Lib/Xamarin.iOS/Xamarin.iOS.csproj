@@ -35,7 +35,6 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.Services.Client" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Common\AccessCondition.cs">
@@ -472,9 +471,6 @@
     </Compile>
     <Compile Include="..\DotNetCommon\Shared\Protocol\WebRequestExtensions.cs">
       <Link>Shared\Protocol\WebRequestExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\DotNetCommon\Table\Protocol\TableUtilities.cs">
-      <Link>Table\Protocol\TableUtilities.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
