@@ -124,7 +124,7 @@ namespace Microsoft.WindowsAzure.Storage
                 reqResult.ExtendedErrorInformation = null;
                 return new StorageException(reqResult, ex.Message, ex) { IsRetryable = false };
             }
-#if RT
+#if RT || XAMARIN
             else if (ex is OperationCanceledException)
             {
                 reqResult.HttpStatusMessage = null;
